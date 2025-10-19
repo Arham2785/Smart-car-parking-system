@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Car Parking System</title>
+    <link rel="stylesheet" href="truck parking page .css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Truck Parking System</h1>
+        </header>
+
+        <section>
+            
+            <h2 style="text-align: center;">Parking Slots Status</h2>
+            <div class="slots-container">
+              <div class="slot occupied">A0</div>
+              <div class="slot occupied">A1</div>
+              <div class="slot occupied">A2</div>
+              <div class="slot available">A3</div>
+              <div class="slot occupied">A4</div>
+              <div class="slot available">A5</div>
+              <div class="slot available">A6</div>
+              <div class="slot available">A7</div>
+              <div class="slot available">A8</div>
+              <div class="slot available">A9</div>
+              <div class="slot occupied">A10</div>
+              <div class="slot occupied">A11</div>
+              <div class="slot occupied">A12</div>
+              <div class="slot available">A13</div>
+              <div class="slot occupied">A14</div>
+              <div class="slot available">A15</div>
+              <div class="slot available">A16</div>
+              <div class="slot occupied">A17</div>
+              <div class="slot available">A18</div>
+              <div class="slot available">A19</div>
+              <div class="slot occupied">A20</div>
+              <div class="slot available">A21</div>
+              <div class="slot occupied">A22</div>
+              <div class="slot available">A23</div>
+              <div class="slot available">A24</div>
+              <div class="slot available">A25</div>
+              <div class="slot available">A26</div>
+              <div class="slot available">27</div>
+              <div class="slot available">A28</div>
+              <div class="slot available">A29</div>
+              <div class="slot available">A30</div>
+              <div class="slot available">A31</div>
+              <div class="slot available">A32</div>
+              <div class="slot available">A33</div>
+              <div class="slot available">A34</div>
+              <div class="slot available">A35</div>
+              <div class="slot available">A37</div>
+              <div class="slot available">A38</div>
+              <div class="slot available">A39</div>
+              <div class="slot available">A40</div>
+              <div class="slot available">A41</div>
+              <div class="slot available">A42</div>
+              <div class="slot available">A43</div>
+              <div class="slot available">A44</div>
+              <div class="slot available">A45</div>
+              <div class="slot available">A46</div>
+              <div class="slot available">A47</div>
+              <div class="slot available">A48</div>
+              <div class="slot available">A49</div>
+              <div class="slot available">A50</div>
+              <div class="slot available">A51</div>
+              <div class="slot available">A52</div>
+              <div class="slot available">A53</div>
+              <div class="slot available">A54</div>
+              <div class="slot available">A55</div>
+              <div class="slot available">A56</div>
+              <div class="slot available">A57</div>
+              <div class="slot available">A58</div>
+              <div class="slot available">A59</div>
+              <div class="slot available">A60</div>
+              <div class="slot available">A61</div>
+              <div class="slot available">A62</div>
+              <div class="slot available">A63</div>
+              <div class="slot available">A64</div>
+              <div class="slot available">A65</div>
+              <div class="slot available">A66</div>
+              <div class="slot available">A67</div>
+              <div class="slot available">A68</div>
+              <div class="slot available">A69</div>
+              <div class="slot available">A70</div>
+              <div class="slot available">A71</div>
+              <div class="slot available">A72</div>
+              <div class="slot available">A73</div>
+              <div class="slot available">A74</div>
+              <div class="slot available">A75</div>
+              <div class="slot available">A76</div>
+              <div class="slot available">A77</div>
+              <div class="slot available">A78</div>
+              <div class="slot available">A79</div>
+              <div class="slot available">A80</div>
+              <div class="slot available">A81</div>
+              <div class="slot available">A82</div>
+              <div class="slot available">A83</div>
+              <div class="slot available">A84</div>
+              <div class="slot available">A85</div>
+              <div class="slot available">A86</div>
+              <div class="slot available">A87</div>
+              <div class="slot available">A88</div>
+              <div class="slot available">A89</div>
+              <div class="slot available">A90</div>
+              <div class="slot available">A91</div>
+              <div class="slot available">A92</div>
+              <div class="slot available">A93</div>
+              <div class="slot available">A94</div>
+              <div class="slot available">A95</div>
+              <div class="slot available">A96</div>
+              <div class="slot available">A97</div>
+              <div class="slot available">A98</div>
+              <div class="slot available">A99</div>
+              <div class="slot available">A100</div>
+              <div class="slot available">A101</div>
+              <div class="slot available">A102</div>
+              <div class="slot available">A103</div>
+              <div class="slot available">A104</div>
+              <div class="slot available">A4105</div>
+              <div class="slot available">A106</div>
+              <div class="slot available">A107</div>
+              <!-- Add more slots as needed -->
+            </div>
+
+            
+              
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        
+        </section>
+
+        <section class="actions">
+            <div class="form-box">
+                <h2>Reserve a Slot</h2>
+                <form id="reserve-form" action="truck_parking.php" method="post">
+                    <input type="text" name="truck_number" placeholder="Truck Number" required>
+                    <input type="text" name="owner_name" placeholder="Owner Name" required>
+                    <input type="number" name="slot_number" placeholder="Slot Number (0–107)" required>
+                    <br>
+                     <!-- NEW Package Selection Section -->
+                       <!-- PACKAGE -->
+    <label>Select Package:</label>
+    <select name="package" id="package" required onchange="showPayment(this.value)">
+        <option value="">-- Choose Package --</option>
+        <option value="per_day">Per Day - Rs. 100</option>
+        <option value="per_week">Per Week - Rs. 600</option>
+        <option value="per_month">Per Month - Rs. 2000</option>
+        <option value="per_year">Per Year - Rs. 20000</option>
+    </select><br>
+
+    <!-- PAYMENT SECTION -->
+    <div id="payment-section" style="display:none;">
+        <label>Payment Method:</label>
+        <select name="payment_method" id="payment_method" required>
+            <option value="">-- Select --</option>
+            <option value="easypaisa">EasyPaisa</option>
+            <option value="jazzcash">JazzCash</option>
+            <option value="nayapay">NayaPay</option>
+        </select><br>
+
+        <label>Phone Number:</label>
+        <input type="text" name="phone_number" id="phone_number" placeholder="03XXXXXXXXX" required><br>
+    </div>
+
+    <input style="background-color: blue;" type="submit" value="Reserve Slot">
+</form>
+<script>
+    function showPayment(pkg) {
+      const paymentSection = document.getElementById('payment-section');
+      if (pkg !== '') {
+        paymentSection.style.display = 'block';
+      } else {
+        paymentSection.style.display = 'none';
+      }
+    }
+  
+    function validateForm() {
+      const phone = document.getElementById('phone_number').value;
+      const phoneRegex = /^03\d{9}$/;
+  
+      if (!phoneRegex.test(phone)) {
+        alert("❌ Invalid phone number. Must start with 03 and be 11 digits.");
+        return false;
+      }
+      return true;
+    }
+  </script>
+  <script>
+    const occupiedSlots = document.querySelectorAll('.slot.occupied');
+    occupiedSlots.forEach(slot => {
+      slot.addEventListener('click', function () {
+        alert("🚫 This slot is already reserved. Please select a different slot.");
+      });
+    });
+  </script>
+
+  
+</body>
+</html>
+  
+      
+            <div class="form-box">
+                <h2>Park truck</h2>
+                <form id="park-form" action="park_truck.php" method="post">
+                    <input type="text" name="truck_number" placeholder="Truck Number" required>
+                    <input type="number" name="slot_number" placeholder="Slot Number" required>
+                    <button type="submit">Park</button>
+                </form>
+            </div>
+
+            <div class="form-box">
+                <h2>Check the location</h2>
+                <form id="check-form" action="check_location of truck.php" method="post">
+                    <input type="text" name="truck_number" placeholder="Enter Truck Number" required>
+                    <button type="submit">Locate</button>
+                </form>
+                <p id="Truck-location"></p>
+            </div>
+        </section>
+
+        <section class="admin-contact">
+            <h2>Contact Admin</h2>
+            <form id="contact-form" action="contact_admin.php" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="truck_parking.js"></script>
+</body>
+</html>

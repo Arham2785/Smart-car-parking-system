@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    padding: 20px;
+  }
+  .slots-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 15px;
+  }
+  .slot {
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+  }
+  .slot:hover {
+    transform: scale(1.05);
+  }
+  .available {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  .occupied {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+header {
+    background: #1a73e8;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.slots-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    margin: 30px 0;
+}
+ /* Style for the package dropdown label and select */
+label[for="package"] {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+    color: #333;
+}
+
+select#package {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    appearance: none;
+}
+
+select#package:focus {
+    border-color: #007bff;
+    outline: none;
+    background-color: #fff;
+}
+
+
+.slot {
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: default;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.slot.available {
+    background-color: #c8f7c5;
+    color: #2d6a4f;
+}
+
+.slot.reserved {
+    background-color: #ffeaa7;
+    color: #b26500;
+}
+
+.slot.occupied {
+    background-color: #ff6b6b;
+    color: #fff;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.form-box {
+    flex: 1 1 300px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+.form-box h2 {
+    margin-bottom: 15px;
+    color: #1a73e8;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+form button {
+    width: 100%;
+    background-color: #1a73e8;
+    color: white;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #135cb0;
+}
+
+.admin-contact {
+    margin-top: 40px;
+}
+
+#car-location {
+    font-weight: bold;
+    color: #2d3436;
+    margin-top: 10px;
+}

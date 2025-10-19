@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Management</title>
+    <link rel="stylesheet" href="account dashboard.css">
+</head>
+<body>
+    <header>
+        <h1>My Account</h1>
+    </header>
+
+    <main>
+        <section class="account-info">
+            <h2>Account Information</h2>
+            <form id="account-form">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username"  placeholder="Username" Enabled >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Email">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter phone number">
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" placeholder="Address">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter new password">
+                </div>
+
+                <button type="button" onclick="updateAccount()">Update Account</button>
+            </form>
+            <div id="account-info-updated" class="updated-info">
+                <!-- Updated information will appear here -->
+            </div>
+        </section>
+
+        <section class="account-settings">
+            <h2>Settings</h2>
+            <form id="settings-form">
+                <div class="form-group">
+                    <label for="notifications">Notifications:</label>
+                    <select id="notifications" name="notifications">
+                        <option value="enabled">Enabled</option>
+                        <option value="disabled">Disabled</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="privacy">Privacy:</label>
+                    <select id="privacy" name="privacy">
+                        <option value="public">Public</option>
+                        <option value="private">Private</option>
+                    </select>
+                </div>
+
+                <button type="button" onclick="saveSettings()">Save Settings</button>
+            </form>
+            <div id="settings-updated" class="updated-info">
+                <!-- Updated settings will appear here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Account Management System</p>
+    </footer>
+
+    <script>
+        function updateAccount() {
+            // Get the values from the form
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const address = document.getElementById("address").value;
+
+            // Display the updated information
+            const accountInfo = `
+                <h3>Updated Account Information</h3>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Phone:</strong> ${phone}</p>
+                <p><strong>Address:</strong> ${address}</p>
+            `;
+            document.getElementById("account-info-updated").innerHTML = accountInfo;
+            alert("Your account information has been updated successfully!");
+        }
+
+        function saveSettings() {
+            // Get the values from the settings form
+            const notifications = document.getElementById("notifications").value;
+            const privacy = document.getElementById("privacy").value;
+
+            // Display the updated settings
+            const settingsInfo = `
+                <h3>Updated Settings</h3>
+                <p><strong>Notifications:</strong> ${notifications}</p>
+                <p><strong>Privacy:</strong> ${privacy}</p>
+            `;
+            document.getElementById("settings-updated").innerHTML = settingsInfo;
+            alert("Your settings have been saved successfully!");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Car Parking System</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background: #003366;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      padding: 100px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #007bff, #0056b3);
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .hero a {
+      padding: 12px 24px;
+      background: white;
+      color: #0056b3;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .hero a:hover {
+      background: #eee;
+    }
+
+    section {
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .features, .how-it-works {
+      background: white;
+    }
+
+    .features h3, .how-it-works h3, .about h3, .contact h3 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      color: #003366;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .feature-box {
+      background: #f1f1f1;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    .contact form {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact input, .contact textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      width: 100%;
+    }
+
+    .contact button {
+      padding: 12px;
+      background: #0056b3;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .contact button:hover {
+      background: #004080;
+    }
+
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Smart Car Parking</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#features">Features</a>
+    <a href="#how-it-works">How It Works</a>
+   <a href="contact_admin.html">Contact</a> 
+    <a href="login.html">Login</a>
+    <a href="signup.html">Signup</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h2>Welcome to Smart Car Parking System</h2>
+  <p>Reserve your slot with ease. Smart. Fast. Reliable.</p>
+  <a href="signup.html">Get Started</a>
+</div>
+
+<section class="about" id="about">
+  <h3>About Us</h3>
+  <p>We offer a next-gen smart parking solution for vehicles of all types — cars, bikes, trucks, and bicycles. Track slot status in real-time and reserve from anywhere with secure login.</p>
+</section>
+
+<section class="features" id="features">
+  <h3>Key Features</h3>
+  <div class="feature-grid">
+    <div class="feature-box">
+      <h4>🕒 Real-Time Slot Status</h4>
+      <p>View live availability of parking slots before arriving.</p>
+    </div>
+    <div class="feature-box">
+      <h4>🔐 Secure Reservations</h4>
+      <p>Your data is encrypted and your slots are guaranteed.</p>
+    </div>
+    <div class="feature-box">
+      <h4>💰 Multiple Payments</h4>
+      <p>Pay using cards, UPI, wallets, or cash.</p>
+    </div>
+    <div class="feature-box">
+      <h4>🧑 Admin Panel</h4>
+      <p>Manage all parking slots and user reservations effectively.</p>
+    </div>
+  </div>
+</section>
+
+<section class="how-it-works" id="how-it-works">
+  <h3>How It Works</h3>
+  <p>It’s as easy as 1-2-3:</p>
+  <div class="feature-grid">
+    <div class="feature-box">
+      <h4>1️⃣ Sign Up / Login</h4>
+      <p>Create your account or log in securely.</p>
+    </div>
+    <div class="feature-box">
+      <h4>2️⃣ Reserve Slot</h4>
+      <p>Select and book your desired parking space.</p>
+    </div>
+    <div class="feature-box">
+      <h4>3️⃣ Park & Go</h4>
+      <p>Park your vehicle in the reserved slot and go.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h3>Contact Us</h3>
+  <form action="contact_admin.php" method="post">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2025 Smart Car Parking System. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

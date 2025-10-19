@@ -1,0 +1,109 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #2C3E50;
+}
+
+.account-info {
+    background-color: #ECF0F1;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.account-info h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.account-info p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.actions h3, .transactions h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.actions ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.actions li {
+    margin: 10px 0;
+}
+
+.btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.transactions table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.transactions th, .transactions td {
+    padding: 12px;
+    text-align: left;
+}
+
+.transactions th {
+    background-color: #3498db;
+    color: white;
+}
+
+.transactions td {
+    background-color: #f9f9f9;
+}
+
+.transactions tr:nth-child(even) td {
+    background-color: #f2f2f2;
+}
+
+footer.footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #888;
+}

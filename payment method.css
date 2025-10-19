@@ -1,0 +1,92 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+/* Payment Container Styling */
+.payment-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Form Heading Styling */
+.payment-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Payment Form Styling */
+.payment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Input Field Styling */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Button Styling */
+.pay-now-btn {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.pay-now-btn:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .payment-container {
+        width: 90%;
+    }
+}

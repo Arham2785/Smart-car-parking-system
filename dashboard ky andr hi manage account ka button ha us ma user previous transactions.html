@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Account</title>
+    <link rel="stylesheet" href="previous transaction.css">
+    <script src="previous transaction.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <h1>Account Management</h1>
+        </header>
+
+        <div class="account-info">
+            <h2>Welcome, John Doe</h2>
+            <p>Email: john.doe@example.com</p>
+            <p>Account Status: Active</p>
+        </div>
+
+        <div class="actions">
+            <h3>Account Actions</h3>
+            <ul>
+                <li><button class="btn" id="changePasswordBtn">Change Password</button></li>
+                <li><button class="btn" id="updateEmailBtn">Update Email</button></li>
+                <li><button class="btn" id="managePaymentBtn">Manage Payment Methods</button></li>
+            </ul>
+        </div>
+
+        <!-- Hidden forms for each action -->
+        <div id="changePasswordForm" class="action-form">
+            <h3>Change Password</h3>
+            <form id="changePassword">
+                <label for="oldPassword">Old Password:</label>
+                <input type="password" id="oldPassword" name="oldPassword" required><br><br>
+                <label for="newPassword">New Password:</label>
+                <input type="password" id="newPassword" name="newPassword" required><br><br>
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" class="btn" id="cancelPasswordBtn">Cancel</button>
+            </form>
+        </div>
+
+        <div id="updateEmailForm" class="action-form">
+            <h3>Update Email</h3>
+            <form id="updateEmail">
+                <label for="newEmail">New Email:</label>
+                <input type="email" id="newEmail" name="newEmail" required><br><br>
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" class="btn" id="cancelEmailBtn">Cancel</button>
+            </form>
+        </div>
+
+        <div id="managePaymentForm" class="action-form">
+            <h3>Manage Payment Methods</h3>
+            <form id="managePayment">
+                <label for="paymentMethod">Select Payment Method:</label><br>
+                <input type="radio" id="easypaisa" name="paymentMethod" value="Easypaisa">
+                <label for="easypaisa">Easypaisa</label><br>
+                <input type="radio" id="jazzcash" name="paymentMethod" value="JazzCash">
+                <label for="jazzcash">JazzCash</label><br><br>
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" class="btn" id="cancelPaymentBtn">Cancel</button>
+            </form>
+        </div>
+
+        <div class="transactions">
+            <h3>Previous Transactions</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Transaction ID</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-12-25</td>
+                        <td>#123456</td>
+                        <td>$100.00</td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td>2024-12-20</td>
+                        <td>#123457</td>
+                        <td>$50.00</td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td>2024-12-15</td>
+                        <td>#123458</td>
+                        <td>$200.00</td>
+                        <td>Pending</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2024 Manage Account. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
